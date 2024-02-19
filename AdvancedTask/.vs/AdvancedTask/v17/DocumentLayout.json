@@ -1,0 +1,157 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|a:\\industry connect\\advancedsprint1\\advancedtask\\advancedtask\\asserthelpers\\shareskillassertion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|solutionrelative:advancedtask\\asserthelpers\\shareskillassertion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|a:\\industry connect\\advancedsprint1\\advancedtask\\advancedtask\\steps\\shareskillsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|solutionrelative:advancedtask\\steps\\shareskillsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|a:\\industry connect\\advancedsprint1\\advancedtask\\advancedtask\\tests\\profileuserdetailstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|solutionrelative:advancedtask\\tests\\profileuserdetailstest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|a:\\industry connect\\advancedsprint1\\advancedtask\\advancedtask\\steps\\skillsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|solutionrelative:advancedtask\\steps\\skillsteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|a:\\industry connect\\advancedsprint1\\advancedtask\\advancedtask\\asserthelpers\\skillassertion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|solutionrelative:advancedtask\\asserthelpers\\skillassertion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|a:\\industry connect\\advancedsprint1\\advancedtask\\advancedtask\\tests\\skilltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|solutionrelative:advancedtask\\tests\\skilltest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|a:\\industry connect\\advancedsprint1\\advancedtask\\advancedtask\\steps\\homepagesteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{41A81058-228C-4ABC-9C78-A05D67C7D7D4}|AdvancedTask\\AdvancedTask.csproj|solutionrelative:advancedtask\\steps\\homepagesteps.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 240,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ShareSkillAssertion.cs",
+              "DocumentMoniker": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\AssertHelpers\\ShareSkillAssertion.cs",
+              "RelativeDocumentMoniker": "AdvancedTask\\AssertHelpers\\ShareSkillAssertion.cs",
+              "ToolTip": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\AssertHelpers\\ShareSkillAssertion.cs",
+              "RelativeToolTip": "AdvancedTask\\AssertHelpers\\ShareSkillAssertion.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAnwEUAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T01:24:07.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShareSkillSteps.cs",
+              "DocumentMoniker": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Steps\\ShareSkillSteps.cs",
+              "RelativeDocumentMoniker": "AdvancedTask\\Steps\\ShareSkillSteps.cs",
+              "ToolTip": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Steps\\ShareSkillSteps.cs",
+              "RelativeToolTip": "AdvancedTask\\Steps\\ShareSkillSteps.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAAD8AAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T01:23:53.901Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProfileUserDetailsTest.cs",
+              "DocumentMoniker": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Tests\\ProfileUserDetailsTest.cs",
+              "RelativeDocumentMoniker": "AdvancedTask\\Tests\\ProfileUserDetailsTest.cs",
+              "ToolTip": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Tests\\ProfileUserDetailsTest.cs",
+              "RelativeToolTip": "AdvancedTask\\Tests\\ProfileUserDetailsTest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T00:55:20.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SkillAssertion.cs",
+              "DocumentMoniker": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\AssertHelpers\\SkillAssertion.cs",
+              "RelativeDocumentMoniker": "AdvancedTask\\AssertHelpers\\SkillAssertion.cs",
+              "ToolTip": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\AssertHelpers\\SkillAssertion.cs",
+              "RelativeToolTip": "AdvancedTask\\AssertHelpers\\SkillAssertion.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAewCgAAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-19T00:17:11.444Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HomePageSteps.cs",
+              "DocumentMoniker": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Steps\\HomePageSteps.cs",
+              "RelativeDocumentMoniker": "AdvancedTask\\Steps\\HomePageSteps.cs",
+              "ToolTip": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Steps\\HomePageSteps.cs",
+              "RelativeToolTip": "AdvancedTask\\Steps\\HomePageSteps.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAmwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-18T23:18:37.909Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SkillSteps.cs",
+              "DocumentMoniker": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Steps\\SkillSteps.cs",
+              "RelativeDocumentMoniker": "AdvancedTask\\Steps\\SkillSteps.cs",
+              "ToolTip": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Steps\\SkillSteps.cs",
+              "RelativeToolTip": "AdvancedTask\\Steps\\SkillSteps.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAIAwwBsAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-18T23:13:16.06Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SkillTest.cs",
+              "DocumentMoniker": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Tests\\SkillTest.cs",
+              "RelativeDocumentMoniker": "AdvancedTask\\Tests\\SkillTest.cs",
+              "ToolTip": "A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Tests\\SkillTest.cs",
+              "RelativeToolTip": "AdvancedTask\\Tests\\SkillTest.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAwwDkAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-02-18T23:13:10.082Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

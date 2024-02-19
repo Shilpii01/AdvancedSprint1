@@ -10,7 +10,7 @@ using System.Reflection;
 
 namespace AdvancedTask.Utilities
 {
-    [SetUpFixture]
+    //[SetUpFixture]
     public class BaseClass
     {
 
@@ -25,21 +25,21 @@ namespace AdvancedTask.Utilities
             var actualPath = path.Substring(0, path.LastIndexOf("bin"));
             var projectPath = new Uri(actualPath).LocalPath;
             Directory.CreateDirectory(projectPath.ToString() + "ExtentReports");
-            var reportPath = projectPath + @"ExtentReports\Advancedtest1Report.html";
+            var reportPath = projectPath + @"ExtentReports\Advancedtask1Report.html";
             var htmlReporter = new ExtentSparkReporter(reportPath);
             //extent = new ExtentReports();
             extent.AttachReporter(htmlReporter);
             extent.AddSystemInfo("Host Name", "LocalHost");
             extent.AddSystemInfo("Environment", "QA");
             extent.AddSystemInfo("UserName", "TestUser");
-            htmlReporter.Config.DocumentTitle = "Mars Project Report";
-            htmlReporter.Config.ReportName = "Automation Test Report";
+            htmlReporter.Config.DocumentTitle = "Mars Project Report For Advanced Task 1";
+            htmlReporter.Config.ReportName = "Automation Test Report For AdvancedTask1";
             htmlReporter.Config.Theme = Theme.Standard;
 
 
         }
 
-            [OneTimeTearDown]
+        [OneTimeTearDown]
         protected void TearDown()
         {
             extent.Flush();
@@ -55,6 +55,7 @@ namespace AdvancedTask.Utilities
         {
             driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
+            driver.Navigate().GoToUrl("http://localhost:5000/");
         }
 
         public void Close()

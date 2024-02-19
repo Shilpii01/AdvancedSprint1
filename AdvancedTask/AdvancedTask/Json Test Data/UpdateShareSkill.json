@@ -1,0 +1,33 @@
+﻿[
+  {
+    "Title": "Interior Decor",
+    "Description": "Interior Decoration adds an unique element of style in your home, it can be tranditional as well as classy at the same time ",
+    "Category": "Fun & Lifestyle",
+    "Subcategory": "Lifestyle",
+    "Tagone": "#Decor",
+    "Tagtwo": "#paintings",
+    "StartDate": "20/12/2023",
+    "EndDate": "30/03/2024",
+    "StartTime": "10.30 am",
+    "EndTime": "11.45 am",
+    "Charge": "18"
+  },
+  {
+
+    "Title": "Software Development ",
+    "Description": "Interior Decoration adds an unique element of style in your home, it can be tranditional as well as classy at the same time ",
+    "Category": "Fun & Lifestyle",
+    "Subcategory": "Lifestyle",
+    "Tagone": "#Decor",
+    "Tagtwo": "#paintings",
+    "StartDate": "10/02/2020",
+    "EndDate": "9/03/2024",
+    "StartTime": "7.30 am",
+    "EndTime": "10.45 pm",
+    "Charge": "45"
+
+
+
+  }
+
+]

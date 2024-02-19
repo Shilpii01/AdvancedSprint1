@@ -10,14 +10,15 @@ namespace AdvancedTask.Pages
 {
     public class LandingPage: BaseClass
     {
-        private IWebElement signInButton;
+        private IWebElement signInButton; 
 
 
         public void renderComponents()
         {
             try
             {
-                signInButton = driver.FindElement(By.XPath("//*[text()='Sign In']"));
+                signInButton= driver.FindElement(By.XPath("//*[text()='Sign In']")); 
+                   
 
             }
             catch (Exception ex)
@@ -28,13 +29,14 @@ namespace AdvancedTask.Pages
 
 
 
-        public void clickSignInButton()
+        public void ClickSignInButton()
         {
 
             //Click on "Sign In" button
-            Wait.WaitToBeClickable(driver, "XPath", "//*[text()='Sign In']", 10);
+            //Wait.WaitToBeClickable(driver, "XPath", "//*[text()='Sign In']", 10);
 
             renderComponents();
+            Thread.Sleep(2000);
             signInButton.Click();
 
         }
