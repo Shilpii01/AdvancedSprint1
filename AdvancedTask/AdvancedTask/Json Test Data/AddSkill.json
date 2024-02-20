@@ -1,0 +1,15 @@
+﻿[
+  {
+    "SkillName": "Quality Analyst",
+    "SkillLevel": "Expert"
+  },
+
+  {
+    "SkillName": "Test Analyst",
+    "SkillLevel": "Beginner"
+  },
+  {
+    "SkillName": "Manual Tester",
+    "SkillLevel": "Intermediate"
+  }
+]
