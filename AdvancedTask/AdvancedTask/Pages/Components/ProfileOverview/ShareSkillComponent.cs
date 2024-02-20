@@ -39,6 +39,7 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
         private readonly string Message = "";
         private IWebElement UpdateShareSkillIcon;
         private IWebElement ManageListingTab;
+        private IWebElement SkillTitle;
         public void renderTitleComponents()
         {
             try
@@ -71,6 +72,12 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
             {
                 Console.WriteLine(ex);
             }
+        }
+
+        public void renderAddedShareSkillRecord()
+        {
+            IWebElement SkillTitle = driver.FindElement(By.XPath("//*[@id=\"listing-management-section\"]/div[2]/div[1]/div[1]/table/tbody/tr[1]/td[3]"));
+
         }
         public void renderSubCategoryComponents()
         {
@@ -209,8 +216,6 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
             AddTagsBox.SendKeys(Keys.Enter);
             ClickOneOffBox.Click();
             ClickOnsite.Click();
-           // StartDateBox.Click();
-            //StartDateBox.SendKeys(StartDate);
             Thread.Sleep(2000);
             EndDateBox.Click();
             EndDateBox.SendKeys(EndDate);
@@ -270,8 +275,6 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
             ClickOneOffBox.Click();
             renderLocationTypeComponent();
             ClickOnsite.Click();
-            // StartDateBox.Click();
-            //StartDateBox.SendKeys(StartDate);
             Thread.Sleep(2000);
             renderAvailableDaysComponent();
             EndDateBox.Click();
@@ -299,7 +302,7 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
         {
             try
             {
-                //ManageListingTab = driver.FindElement(By.XPath("//a[contains(text(),'Manage Listings')]"));
+
                 UpdateShareSkillIcon = driver.FindElement(By.XPath("//*[@id=\"listing-management-section\"]/div[2]/div[1]/div[1]/table/tbody/tr[1]/td[8]/div/button[2]/i"));
                 
             }
@@ -313,7 +316,6 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
         {
             renderUpdateShareSkillIcon();
             Thread.Sleep(2000);
-            //ManageListingTab.Click();
             Thread.Sleep(4000);
             UpdateShareSkillIcon.Click();
             Thread.Sleep(4000);
@@ -351,8 +353,6 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
             Thread.Sleep(1000);
             AddTagsBox.SendKeys(Tagtwo);
             AddTagsBox.SendKeys(Keys.Enter);
-            //StartDateBox.Click();
-           // StartDateBox.SendKeys(StartDate);
             Thread.Sleep(2000);
             EndDateBox.Click();
             EndDateBox.SendKeys(EndDate);
@@ -421,9 +421,15 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
         {
             renderMessage();
             Thread.Sleep(2000);
-            //get the text of the message element
             string Message = PopUpMessage.Text;
             return Message;
+        }
+
+        public string GetAddedShareSkillREcordTitle()
+        {
+            renderAddedShareSkillRecord();
+            string ShareSkillText = SkillTitle.Text;
+            return ShareSkillText;
         }
     }
 }

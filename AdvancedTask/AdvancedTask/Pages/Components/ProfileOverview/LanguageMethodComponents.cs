@@ -22,6 +22,7 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
         public IWebElement PopUpMessage;
         private IWebElement DeleteIcon;
          public string Message = "";
+        IWebElement LanguageRecord;
 
         public void renderAddComponents()
         {
@@ -64,6 +65,11 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
             Thread.Sleep(5000);
         }
 
+        public void renderLanguageRecord()
+        {
+
+            IWebElement LanguageRecord = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
+        }
         public void AddNewLanguageRecordWithoutRequirdFeilds(string LanguageName, string LanguageLevel)
         {
 
@@ -132,11 +138,17 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
 
 
         }
+
+        public string GetLanguageRecordText()
+        {
+            renderLanguageRecord();
+            string LanguageRecordText = LanguageRecord.Text;
+            return LanguageRecordText;
+
+        }
         public string GetPopUpMessageText()
         {
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-            //IWebElement PopUpMessage = wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//div[@class='ns-box-inner']")));
-
             PopUpMessage = driver.FindElement(By.XPath("//div[@class='ns-box-inner']"));
             Thread.Sleep(3000);
             string Message = PopUpMessage.Text;

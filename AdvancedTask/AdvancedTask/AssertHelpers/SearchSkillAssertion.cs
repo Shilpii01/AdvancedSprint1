@@ -1,4 +1,5 @@
-﻿using AdvancedTask.Test_Model;
+﻿using AdvancedTask.Pages.Components.ProfileOverview;
+using AdvancedTask.Test_Model;
 using AdvancedTask.Utilities;
 using Microsoft.VisualStudio.TestPlatform.ObjectModel.Client;
 using NUnit.Framework;
@@ -14,16 +15,18 @@ namespace AdvancedTask.AssertHelpers
 {
     public class SearchSkillAssertion:BaseClass
     {
+        SearchSkillComponent SearchSkillComponentObj;
 
+        public SearchSkillAssertion()
+        {
+            SearchSkillComponentObj = new SearchSkillComponent();
+        }
 
         public void SearchSkillAssert()
         {
             List<SearchSkill> SearchSkillData = JsonReader.ReadTestDataFromJson<SearchSkill>("A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Json Test Data\\SearchSkill.json");
 
-
-            IWebElement SearchedSkill = driver.FindElement(By.XPath("//body/div[1]/div[1]/div[1]/div[2]/div[1]/section[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[2]/p[1]"));
-
-           string  Message = SearchedSkill.Text;
+           string  Message = SearchSkillComponentObj.GetSearchedSkillNameText();
 
             Assert.That(Message == SearchSkillData[0].Skill, "Searched skills are not matched");
           
@@ -33,8 +36,8 @@ namespace AdvancedTask.AssertHelpers
         {
             List<SearchSkill> SearchSkillData = JsonReader.ReadTestDataFromJson<SearchSkill>("A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Json Test Data\\SearchSkillByInvalidData.json");
 
-            
-            bool link = driver.FindElement(By.XPath("//h3[contains(text(),'No results found, please select a new category!')]")).Enabled;
+
+            bool link = SearchSkillComponentObj.GetInvalidSearchedSkill();
             if (link==true) 
             {
                 Assert.Pass("No results Display");
@@ -50,9 +53,9 @@ namespace AdvancedTask.AssertHelpers
         public void SearchUserNameAssert()
         {
             List<SearchSkill> SearchSkillData = JsonReader.ReadTestDataFromJson<SearchSkill>("A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Json Test Data\\SearchSkillByUsername.json");
-           
-            IWebElement  Username = driver.FindElement(By.XPath("//body/div[1]/div[1]/div[1]/div[2]/div[1]/section[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]"));
-            string Username1 = Username.Text;
+
+
+            string Username1 = SearchSkillComponentObj.GetUsernameText();
             Thread.Sleep(2000);
 
             Assert.That(Username1 == SearchSkillData[0].Username, "Username is not matched");
@@ -65,7 +68,7 @@ namespace AdvancedTask.AssertHelpers
             List<SearchSkill> SearchSkillData = JsonReader.ReadTestDataFromJson<SearchSkill>("A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Json Test Data\\SearchSkillByCategoryData.json");
            
             string CategorySearched = SearchSkillData[0].Category;
-            bool categoryXpath = driver.FindElement(By.XPath("//*[@id=\"service-search-section\"]/div[2]/div/section/div/div[1]/div[1]/div/a[2]/b")).Enabled;
+            bool categoryXpath = SearchSkillComponentObj.GetCategoryXpath();
             
             if ((CategorySearched== "Graphics & Design") && (categoryXpath==true))
             {
@@ -81,7 +84,7 @@ namespace AdvancedTask.AssertHelpers
         {
             List<SearchSkill> SearchSkillData = JsonReader.ReadTestDataFromJson<SearchSkill>("A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Json Test Data\\SearchSkillByFilterData.json");
             string buttonText = SearchSkillData[0].FilterOption;
-            bool OnlineOption = driver.FindElement(By.XPath("//*[@id=\"service-search-section\"]/div[2]/div/section/div/div[1]/div[5]/button[2]")).Enabled;
+            bool OnlineOption = SearchSkillComponentObj.GetFilterOptions();
 
             if ((buttonText == "Onsite") && (OnlineOption == true)) 
             {

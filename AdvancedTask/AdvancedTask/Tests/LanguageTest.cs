@@ -29,7 +29,7 @@ namespace AdvancedTask.Tests
         {
             Initialize();
             LoginStepsObj.DoLogin();
-            //HomePageStepsObj.ClickOnLangaugesTab();
+         
             LanguageStepsObj.LanguageStateReset();
 
         }

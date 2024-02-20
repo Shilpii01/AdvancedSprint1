@@ -43,7 +43,7 @@ namespace AdvancedTask.Tests
         [Test, Order(1), Description("Verify that a Skill can be added with valid data")]
         public void AddSkillWithValidData()
         {
-           // HomePageStepsObj.ClickOnSkillsTab();
+          
             SkillStepsObj.AddSkillDetails();
         }
         [Test, Order(2), Description("Verify that a Skill can be added with Invalid data")]

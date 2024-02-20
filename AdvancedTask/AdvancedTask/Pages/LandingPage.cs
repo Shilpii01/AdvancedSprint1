@@ -32,9 +32,6 @@ namespace AdvancedTask.Pages
         public void ClickSignInButton()
         {
 
-            //Click on "Sign In" button
-            //Wait.WaitToBeClickable(driver, "XPath", "//*[text()='Sign In']", 10);
-
             renderComponents();
             Thread.Sleep(2000);
             signInButton.Click();

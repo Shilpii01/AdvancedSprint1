@@ -27,7 +27,7 @@ namespace AdvancedTask.Tests
         {
             Initialize();
             LoginStepsObj.DoLogin();
-            //ShareSkillStepsObj.DeleteShareSkill();
+         
 
         }
 

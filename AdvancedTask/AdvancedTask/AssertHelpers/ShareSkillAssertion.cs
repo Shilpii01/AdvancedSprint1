@@ -25,9 +25,8 @@ namespace AdvancedTask.AssertHelpers
             ShareSkillComponentObj = new ShareSkillComponent();
         }
         public void AssertAddedSkillTitle()
-        {
-            IWebElement SkillTitle = driver.FindElement(By.XPath("//*[@id=\"listing-management-section\"]/div[2]/div[1]/div[1]/table/tbody/tr[1]/td[3]"));
-            string SkillTitleText = SkillTitle.Text;
+        {           
+            string SkillTitleText = ShareSkillComponentObj.GetAddedShareSkillREcordTitle();
             List<ShareSkill> ShareSkillData = JsonReader.ReadTestDataFromJson<ShareSkill>("A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Json Test Data\\AddShareSkill.json");
 
             Assert.That(ShareSkillData[0].Title == SkillTitleText, "Share Skill is not added successfully");
@@ -60,8 +59,8 @@ namespace AdvancedTask.AssertHelpers
         public void AssertUpdatedSkillTitle()
         {
             Thread.Sleep(3000);
-            IWebElement UpdatedSkill = driver.FindElement(By.XPath("//*[@id=\"listing-management-section\"]/div[2]/div[1]/div[1]/table/tbody/tr[1]/td[3]"));
-            string UpdatedSkillTitle = UpdatedSkill.Text;
+
+            string UpdatedSkillTitle = ShareSkillComponentObj.GetAddedShareSkillREcordTitle();
             List<ShareSkill> ShareSkillData = JsonReader.ReadTestDataFromJson<ShareSkill>("A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Json Test Data\\UpdateShareSkill.json");
            
             Assert.That(UpdatedSkillTitle== ShareSkillData[0].Title, " Share skill has been Updated successfully ");

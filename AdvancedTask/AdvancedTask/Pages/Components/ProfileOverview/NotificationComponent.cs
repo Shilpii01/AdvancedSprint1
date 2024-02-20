@@ -45,7 +45,7 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
             {
 
                 SeeLessLink = driver.FindElement(By.XPath("//a[contains(text(),'...Show Less')]"));
-                //SeeLessLink = driver.FindElement(By.XPath("//*[@id=\"notification-section\"]/div[2]/div/div/div[3]/div[2]/span/span/div/div[11]/div[1]/center/a"));
+               
             }
             catch (Exception ex)
             {
@@ -138,7 +138,7 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
             catch (Exception ex)
             {
                 // Handle any exceptions that occur
-                Console.WriteLine("Error: " + ex.Message);
+                Console.WriteLine( ex);
                 return false;
             }
         }
@@ -152,8 +152,8 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
             }
             catch (Exception ex)
             {
-                // Handle any exceptions that occur
-                Console.WriteLine("Error: " + ex.Message);
+               
+                Console.WriteLine( ex);
                 return false;
             }
         }
@@ -168,16 +168,13 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
                 Thread.Sleep(2000);
                 renderSeeLessComponents();
                 Thread.Sleep(3000);
-
-                //WebDriverWait wait = new (driver, TimeSpan.FromSeconds(10));
-                //wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//*[@id=\"notification-section\"]/div[2]/div/div/div[3]/div[2]/span/span/div/div[11]/div[1]/center/a")));
                 SeeLessLink.Click();
                 return true;
             }
             catch (Exception ex)
             {
-                // Handle any exceptions that occur
-                Console.WriteLine("Error: " + ex.Message);
+                
+                Console.WriteLine(ex);
                 return false;
             }
         }
@@ -192,8 +189,8 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
             }
             catch (Exception ex)
             {
-                // Handle any exceptions that occur
-                Console.WriteLine("Error: " + ex.Message);
+                
+                Console.WriteLine(ex);
                 return false;
             }
         }
@@ -260,8 +257,7 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
             try
             {
                 renderAddMessage();
-                WebDriverWait wait = new (driver, TimeSpan.FromSeconds(10));
-                //wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//div[@class='ns-box-inner']")));
+                WebDriverWait wait = new (driver, TimeSpan.FromSeconds(10));               
                 Thread.Sleep(3000);
                 if (PopUpMessage != null)
                 {

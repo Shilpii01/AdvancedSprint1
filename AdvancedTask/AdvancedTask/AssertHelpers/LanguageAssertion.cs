@@ -25,10 +25,9 @@ namespace AdvancedTask.AssertHelpers
         public void AssertAddedLanguage()
         {
             List<Language> LanguageData = JsonReader.ReadTestDataFromJson<Language>("A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Json Test Data\\AddValidLanguage.json");
-
-            //LanguageMethodComponentsObj.AddNewLanguage(LanguageData[0].LanguageName, LanguageData[0].LanguageLevel);
-            IWebElement LanguageRecord = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
-            string NewLanguage = LanguageRecord.Text;
+            
+            string NewLanguage = LanguageMethodComponentsObj.GetLanguageRecordText();
+           
             Assert.That(LanguageData[0].LanguageName == NewLanguage, "Language is not added successfully");
 
         }
@@ -46,9 +45,9 @@ namespace AdvancedTask.AssertHelpers
         {
             List<Language> LanguageData = JsonReader.ReadTestDataFromJson<Language>("A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Json Test Data\\AddDestructiveLang.json");
             Thread.Sleep(2000);
-            IWebElement LanguageRecord = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody[last()]/tr/td[1]"));
+            
             Thread.Sleep(2000);
-            string NewLanguage = LanguageRecord.Text;
+            string NewLanguage = LanguageMethodComponentsObj.GetLanguageRecordText();
             Assert.That(LanguageData[0].LanguageName == NewLanguage, "Language is not added successfully");
           
         }
@@ -58,7 +57,7 @@ namespace AdvancedTask.AssertHelpers
         {
             List<Language> LanguageData = JsonReader.ReadTestDataFromJson<Language>("A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Json Test Data\\UpdatedLanguage.json");
 
-            //LanguageMethodComponentsObj.UpdateLanguage(LanguageData[0].LanguageName, LanguageData[0].LanguageLevel);
+            
             string NewLanguage = LanguageMethodComponentsObj.GetPopUpMessageText();
             Assert.That(NewLanguage == LanguageData[0].LanguageName + " has been updated to your languages", "Language has not been updated");
 

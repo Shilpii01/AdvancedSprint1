@@ -23,6 +23,7 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
         private IWebElement UpdateSkillButton;
         public ReadOnlyCollection<IWebElement> SkillRow;
         public IWebElement DeleteIcon;
+        public IWebElement SkillRecord;
         public void renderAddComponents()
         {
             try
@@ -62,6 +63,11 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
             AddButton.Click();
             Thread.Sleep(3000);
         }
+        public void renderAddedSkillRecord()
+        {
+            SkillRecord = driver.FindElement(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[3]/div/div[2]/div/table/tbody/tr/td[1]"));
+
+        }
         public void renderupdateComponents()
         {
             try
@@ -99,15 +105,12 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
         public void UpdateSkill(string SkillName, string SkillLevel)
         {
             renderupdateComponents();
-            //UpdateSkillTextBox.SendKeys(Keys.Control + "A");
             UpdateSkillTextBox.Click();
             UpdateSkillTextBox.Clear();
             UpdateSkillTextBox.SendKeys(SkillName);
             Thread.Sleep(2000);
-            //Choose the level from the drop down
             UpdateSkillLevel.Click();
             UpdateSkillLevel.SendKeys(SkillLevel);
-            //Click on update button
             UpdateSkillButton.Click();
             Thread.Sleep(2000);
         }
@@ -128,7 +131,6 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
             try
             {
                 var deleteIcon = driver.FindElement(By.XPath($"//tbody[tr[td[text()='{SkillName}'] and td[text()='{SkillLevel}']]]//i[@class='remove icon']"));
-                // Find and click the delete icon in the row
                 deleteIcon.Click();
                 Thread.Sleep(2000);
             }
@@ -141,24 +143,12 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
         public string GetPopUpMessageText()
         {
             renderAddMessage();
-            //get the text of the message element
             string Message = PopUpMessage.Text;
             return Message;
         }
 
         public void ClearExistingSkills()
-        {
-            // SkillRow = driver.FindElements(By.XPath("//*[@id=\"account-profile-section\"]/div/section[2]/div/div/div/div[3]/form/div[2]/div/div[2]/div/table/tbody"));          
-
-            //Thread.Sleep(2000);
-            //int totalrows = SkillRow.Count;
-            //Console.WriteLine(totalrows);
-            //    for (int i = 0; i < totalrows; i = i + 1)
-            //    {
-            //        renderDeleteSkill();
-            //        DeleteIcon.Click();
-            //        Thread.Sleep(2000);
-            //    }
+        {           
 
             {
 
@@ -177,6 +167,14 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
                 catch (NoSuchElementException)
                 { Console.WriteLine("no items to delete"); }
             }
+        }
+
+        public string GetAddedSkillRecordText()
+        {
+                renderAddedSkillRecord();
+            String SkillRecordText = SkillRecord.Text;
+            return SkillRecordText;
+
         }
 
 

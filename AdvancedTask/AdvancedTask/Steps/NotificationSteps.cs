@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace AdvancedTask.Steps
 {
-    public class NotificationSteps:BaseClass
+    public class NotificationSteps : BaseClass
     {
         NotificationComponent NotificationComponentObj;
         ProfileTabComponents ProfileTabComponentsObj;
@@ -24,7 +24,7 @@ namespace AdvancedTask.Steps
         {
 
             ProfileTabComponentsObj.ClickNotificationTab();
-                
+
             bool SeeAllButtonClicked = NotificationComponentObj.SelectSeeAll();
             NotificationAssertionObj.AssertNotificationSeeAll();
 
@@ -32,7 +32,7 @@ namespace AdvancedTask.Steps
         public void LoadMoreClicked()
         {
             ProfileTabComponentsObj.ClickDashboard();
-               
+
             bool LoadMoreButtonClicked = NotificationComponentObj.SelectLoadMore();
             Thread.Sleep(3000);
             NotificationAssertionObj.AssertLoadMore();
@@ -43,8 +43,8 @@ namespace AdvancedTask.Steps
             ProfileTabComponentsObj.ClickDashboard();
             bool ShowLessButtonClicked = NotificationComponentObj.SelectShowLess();
             Thread.Sleep(3000);
-           NotificationAssertionObj.AssertShowLess();
-            Console.WriteLine("Verification is successful.");
+            NotificationAssertionObj.AssertShowLess();
+
 
         }
         public void SelectAlllicked()
@@ -53,23 +53,23 @@ namespace AdvancedTask.Steps
             bool AllNotificationSelected = NotificationComponentObj.SelectSelectAll();
             Thread.Sleep(3000);
             NotificationAssertionObj.AssertSelectAll();
-            Console.WriteLine("Verification is successful.");
+
         }
         public void UnselectAllClicked()
         {
             ProfileTabComponentsObj.ClickDashboard();
             bool AllNotificationUnselected = NotificationComponentObj.SelectUnselectAll();
             Thread.Sleep(3000);
-           NotificationAssertionObj.AssertUnselectAll();
-            Console.WriteLine("Verification is successful.");
+            NotificationAssertionObj.AssertUnselectAll();
+
         }
         public void MarkAsReadlicked()
         {
             ProfileTabComponentsObj.ClickDashboard();
             bool MarkedSelectionAsRead = NotificationComponentObj.SelectMarkAsRead();
             string Message = NotificationComponentObj.GetMessageBoxText();
-            Console.WriteLine(Message);
-           NotificationAssertionObj.AssertMarkAsread();
+
+            NotificationAssertionObj.AssertMarkAsread();
 
         }
         public void DeleteSeletionClicked()
@@ -77,7 +77,7 @@ namespace AdvancedTask.Steps
             ProfileTabComponentsObj.ClickDashboard();
             bool SelectNotificationDeleted = NotificationComponentObj.SelectDeleteSelectionButton();
             string Message = NotificationComponentObj.GetMessageBoxText();
-            Console.WriteLine(Message);
+
             NotificationAssertionObj.AssertDeleteSelection();
 
         }

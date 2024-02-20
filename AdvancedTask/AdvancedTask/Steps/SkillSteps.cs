@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace AdvancedTask.Steps
 {
-    public class SkillSteps:BaseClass
+    public class SkillSteps : BaseClass
     {
         SkillComponent SkillComponentObj;
         SkillMethodComponents SkillMethodComponentsObj;
@@ -32,14 +32,14 @@ namespace AdvancedTask.Steps
         {
 
             List<Skill> SkillData = JsonReader.ReadTestDataFromJson<Skill>("A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Json Test Data\\AddSkill.json");
-            
-                
-                SkillComponentObj.ClickAddSkill();
-                SkillMethodComponentsObj.AddSkill(SkillData[0].SkillName, SkillData[0].SkillLevel);
 
-                Thread.Sleep(2000);
-                SkillAssertionObj.AssertAddedSkill();
-            
+
+            SkillComponentObj.ClickAddSkill();
+            SkillMethodComponentsObj.AddSkill(SkillData[0].SkillName, SkillData[0].SkillLevel);
+
+            Thread.Sleep(2000);
+            SkillAssertionObj.AssertAddedSkill();
+
         }
         public void AddInvalidSkillDetails()
         {
@@ -66,23 +66,22 @@ namespace AdvancedTask.Steps
         {
 
             List<Skill> SkillData = JsonReader.ReadTestDataFromJson<Skill>("A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Json Test Data\\UpdatedSkill.json");
-            
-                SkillComponentObj.ClickUpdateSkill();
+
+            SkillComponentObj.ClickUpdateSkill();
             SkillMethodComponentsObj.UpdateSkill(SkillData[0].SkillName, SkillData[0].SkillLevel);
-               //string Message = SkillMethodComponentsObj.GetPopUpMessageText();
-                
-                SkillAssertionObj.AssertUpdatedSkill();
-            
+
+
+            SkillAssertionObj.AssertUpdatedSkill();
+
         }
         public void DeleteSkillDetails()
         {
             List<Skill> SkillData = JsonReader.ReadTestDataFromJson<Skill>("A:\\Industry Connect\\AdvancedSprint1\\AdvancedTask\\AdvancedTask\\Json Test Data\\DeleteSkill.json");
 
             SkillMethodComponentsObj.DeleteSkill(SkillData[0].SkillName, SkillData[0].SkillLevel);
-                //string Message = SkillMethodComponentsObj.GetPopUpMessageText();
-                //Console.WriteLine(Message);
-                SkillAssertionObj.AssertDeletedSkill();
-            
+
+            SkillAssertionObj.AssertDeletedSkill();
+
 
         }
     }

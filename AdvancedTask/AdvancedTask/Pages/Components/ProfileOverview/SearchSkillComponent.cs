@@ -16,7 +16,11 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
         private IWebElement clickSearch;
         private IWebElement AdduserName;
         private IWebElement Clickusername;
-
+        private IWebElement SearchedSkill;
+        private IWebElement InvalidSearchSkilllink;
+        private IWebElement Username;
+        private IWebElement categoryXpath;
+        private IWebElement OnlineOption;
         public void renderSearchComponents()
         {
             try
@@ -27,6 +31,12 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
             {
                 Console.WriteLine(ex);
             }
+        }
+
+        public void renderSearchedSkillName()
+        {
+            IWebElement SearchedSkill = driver.FindElement(By.XPath("//body/div[1]/div[1]/div[1]/div[2]/div[1]/section[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[2]/p[1]"));
+
         }
         public void renderClicksearchComponents()
         {
@@ -89,14 +99,12 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
            
             IWebElement categoryElement = driver.FindElement(By.LinkText(Category));
             categoryElement.Click();
-            //categoryElement.SendKeys(Category);
-            //categoryElement.Click();
+
             Thread.Sleep(2000);
             
             IWebElement SubcategoryElement = driver.FindElement(By.LinkText(Subcategory));
             SubcategoryElement.Click();
-            //SubcategoryElement.SendKeys(Subcategory);
-            //SubcategoryElement.Click();
+
         }
 
         public void SearchByFilter(string FilterOption)
@@ -112,5 +120,65 @@ namespace AdvancedTask.Pages.Components.ProfileOverview
         
 
         }
+
+        public String GetSearchedSkillNameText()
+        {
+            renderSearchedSkillName();
+            string SearchSkillName = SearchedSkill.Text;
+            return SearchSkillName;
+
+        }
+
+        public void renderInvalidSearchSkill()
+        {
+             InvalidSearchSkilllink = driver.FindElement(By.XPath("//h3[contains(text(),'No results found, please select a new category!')]"));
+        }
+
+        public bool GetInvalidSearchedSkill()
+        {
+            renderInvalidSearchSkill();
+           bool link = InvalidSearchSkilllink.Enabled;
+            return true;
+        }
+
+        public void renderUsernameText()
+        {
+             Username = driver.FindElement(By.XPath("//body/div[1]/div[1]/div[1]/div[2]/div[1]/section[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a[1]"));
+        }
+
+        public string GetUsernameText()
+        {
+            renderUsernameText();
+            string SkillUsername = Username.Text;
+            return SkillUsername;
+        }
+
+        public void rendercategoryXpath()
+        {
+             categoryXpath = driver.FindElement(By.XPath("//*[@id=\"service-search-section\"]/div[2]/div/section/div/div[1]/div[1]/div/a[2]/b"));
+
+        }
+
+        public bool GetCategoryXpath()
+        {
+            rendercategoryXpath();
+            bool category= categoryXpath.Enabled;
+            return true;
+        }
+
+        public void renderfilteroptions()
+        {
+             OnlineOption = driver.FindElement(By.XPath("//*[@id=\"service-search-section\"]/div[2]/div/section/div/div[1]/div[5]/button[2]"));
+        }
+
+        public bool GetFilterOptions()
+        {
+            renderfilteroptions();
+            bool link = OnlineOption.Enabled;
+            return true;
+
+        }
+
     }
+
 }
